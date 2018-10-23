@@ -6,7 +6,7 @@ yangjinchun
 
 > A Mpvue project
 
-##information
+## information
 
 'npm start' to run this application
 
