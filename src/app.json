@@ -1,6 +1,10 @@
 {
   "pages": [
-    "pages/Home/main"
+    "pages/Home/main",
+    "pages/test-page1/main",
+    "pages/test-page2/main",
+    "pages/test-page3/main",
+    "pages/test-page4/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
