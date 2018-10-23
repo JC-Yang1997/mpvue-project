@@ -5,9 +5,14 @@
                v-for="(item,index) in titleList" 
                :key="index"
                class="title_item">
-               <navigator 
+                <div 
+                    class="title_router"
+                    @click="handleTitleItem(index)">
+                    {{item.title}}
+                </div>
+               <!-- <navigator 
                     :url="item.router"
-                    class="title_router">{{item.title}}</navigator>
+                    class="title_router">{{item.title}}</navigator> -->
            </div>
        </div>
        <swiper indicator-dots autoplay interval="3000" duration="1000">
@@ -17,10 +22,19 @@
             </swiper-item>
         </block>
         </swiper>
+        <div>
+            <div v-if="componentChooseId == 0"><test-cp-one /></div>
+            <div v-if="componentChooseId == 1"><test-cp-two /></div>
+            <div v-if="componentChooseId == 2"><test-cp-three /></div>
+            <div v-if="componentChooseId == 3"><test-cp-four /></div>
+        </div>
     </div>
 </template>
 <script>
-
+import testCpOne from "../../components/test-cp1/index.vue";
+import testCpTwo from "../../components/test-cp2/index.vue";
+import testCpThree from "../../components/test-cp3/index.vue";
+import testCpFour from "../../components/test-cp4/index.vue";
 export default {
     data(){
         return {
@@ -49,13 +63,19 @@ export default {
                 "http://dummyimage.com/300x200/b9f279&text=Jessica Rodriguez",
                 "http://dummyimage.com/300x200/f279dc&text=Brenda Hall"
             ],
+            componentChooseId:0
         };
     },
     components:{
-
+        testCpOne,
+        testCpTwo,
+        testCpThree,
+        testCpFour
     },
     methods:{
-       
+       handleTitleItem(a){
+           this.componentChooseId = a;
+       }
     },
     computed:{
 
