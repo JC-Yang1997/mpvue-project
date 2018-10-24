@@ -23,6 +23,8 @@
             <div v-if="componentChooseId == 2"><test-cp-three /></div>
             <div v-if="componentChooseId == 3"><test-cp-four /></div>
         </div>
+
+        <tabbar />
     </div>
 </template>
 <script>
@@ -30,6 +32,8 @@ import testCpOne from "@/components/test-cp1/index.vue";
 import testCpTwo from "@/components/test-cp2/index.vue";
 import testCpThree from "@/components/test-cp3/index.vue";
 import testCpFour from "@/components/test-cp4/index.vue";
+import tabbar from '@/components/tabbar/tabbar.vue';
+
 export default {
     data(){
         return {
@@ -43,7 +47,8 @@ export default {
         testCpOne,
         testCpTwo,
         testCpThree,
-        testCpFour
+        testCpFour,
+        tabbar
     },
     methods:{
        handleTitleItem(a){

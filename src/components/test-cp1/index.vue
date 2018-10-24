@@ -1,12 +1,15 @@
 <template>
     <div>
         <swiper :imgs="imgUrls"/>
-        <div @click="testAjax">测试ajax请求</div>
+
+        <!-- <div @click="testAjax">测试ajax请求</div> -->
+
+        <div class="yj_buy">一键购买</div>
     </div>
 </template>
 <script>
-import swiper from '@/components/swiper/swiper.vue';
 import axios from '@/configs/axios/axios';
+import swiper from '@/components/swiper/swiper.vue';
 export default {
     data(){
         return {
@@ -35,6 +38,15 @@ export default {
 }
 </script>
 <style scoped>
-
+.yj_buy{
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+    background-color: gray;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 </style>
 
