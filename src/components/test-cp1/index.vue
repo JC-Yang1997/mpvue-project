@@ -1,10 +1,12 @@
 <template>
     <div>
         <swiper :imgs="imgUrls"/>
+        <div @click="testAjax">测试ajax请求</div>
     </div>
 </template>
 <script>
 import swiper from '@/components/swiper/swiper.vue';
+import axios from '@/configs/axios/axios';
 export default {
     data(){
         return {
@@ -19,6 +21,16 @@ export default {
     },
     components:{
         swiper
+    },
+    methods:{
+        testAjax(){
+            axios.get('/105586/example/1540260667868')
+                .then(function(res){
+                console.log(res.data);
+                },function(){
+                console.log("axios请求出错")
+            });
+        }
     }
 }
 </script>
