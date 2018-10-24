@@ -1,15 +1,10 @@
 <template>
     <div>
-    <swiper indicator-dots autoplay circular interval="3000" duration="1000">
-        <block>
-            <swiper-item :class="swiper-item" v-for="(item,index) in imgUrls" :key="index">
-                <image :src="item" class="slide-image"/>
-            </swiper-item>
-        </block>
-    </swiper>
+        <swiper :imgs="imgUrls"/>
     </div>
 </template>
 <script>
+import swiper from '@/components/swiper/swiper.vue';
 export default {
     data(){
         return {
@@ -21,22 +16,13 @@ export default {
                 "http://dummyimage.com/300x200/f279dc&text=Brenda Hall"
             ],
         };
+    },
+    components:{
+        swiper
     }
 }
 </script>
 <style scoped>
-swiper{
-    height: 200px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 10px;
-}
-.slide-image{
-    height: 100%;
-    width: 100%;
-}
+
 </style>
 
