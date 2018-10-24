@@ -7,7 +7,7 @@
 export default {
     data(){
         return {
-            content:"page1"
+            content:"个人中心页面"
         };
     }
 }
@@ -15,4 +15,3 @@ export default {
 <style scoped>
 
 </style>
-

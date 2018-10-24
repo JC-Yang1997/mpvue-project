@@ -1,17 +1,31 @@
 <template>
     <div>
         <div class="tabbar">
-            <div class="tabbar_item">首页</div>
-            <div class="tabbar_item">列表</div>
-            <div class="tabbar_item">详情</div>
-            <div class="tabbar_item">我的</div>
-            <div class="ydt_item">一点通</div>
+            <div class="tabbar_item">
+                <navigator class="tabbar_item_nav" url="/pages/mall/main">商城</navigator>
+            </div>
+            <div class="tabbar_item">
+                <navigator class="tabbar_item_nav" url="/pages/list/main">列表</navigator>
+            </div>
+            <div class="tabbar_item">
+                <navigator class="tabbar_item_nav" url="/pages/detail/main">详情</navigator>
+            </div>
+            <div class="tabbar_item">
+                <navigator class="tabbar_item_nav" url="/pages/mine/main">我的</navigator>
+            </div>
+        </div>
+        <div class="ydt_button">
+            <navigator url="/pages/basicPage/main">一点通</navigator>
         </div>
     </div>
 </template>
 <script>
 export default {
-    
+    data(){
+        return {
+          
+        }
+    }
 }
 </script>
 <style scoped>
@@ -39,18 +53,25 @@ export default {
 .tabbar_item:nth-of-type(2){
     margin-right: 20%;
 }
-.ydt_item{
+.tabbar_item_nav{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ydt_button{
     height: 50px;
-    width: 50px;
+    width:50px;
     background-color: orange;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 12px;
-    position:absolute;
-    top: -28%;
-    left: 43%;
     border-radius: 50%;
+    position: fixed;
+    bottom: 0px;
+    left: 42%;
 }
 </style>

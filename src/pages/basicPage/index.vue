@@ -7,7 +7,7 @@
 export default {
     data(){
         return {
-            content:"page3"
+            content:"一点通页面"
         };
     }
 }
@@ -15,3 +15,4 @@ export default {
 <style scoped>
 
 </style>
+

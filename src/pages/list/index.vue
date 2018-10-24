@@ -7,7 +7,7 @@
 export default {
     data(){
         return {
-            content:"page2"
+            content:"商品列表页面"
         };
     }
 }
